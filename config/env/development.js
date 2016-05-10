@@ -7,9 +7,7 @@ module.exports = {
   connections: {
     mongodb: {
       host: process.env.DB_HOST || [
-        '127.0.0.1:27171'
-        // '127.0.0.1:27171',
-        // '127.0.0.1:27172'
+        '127.0.0.1:27017'
       ].join(),
       dbName: process.env.DB_NAME || 'test_123'
     }

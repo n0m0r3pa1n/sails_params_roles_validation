@@ -21,7 +21,6 @@ html
             .control-label #{error.message}
         form.form-signin(method='POST')
           span#reauth-email.reauth-email
-          input(name='_csrf', value='#{csrf}', type='hidden')
           input#inputEmail.form-control(name='username', type='text', placeholder='Username', required='', autofocus='')
           input#inputPassword.form-control(name='password', type='password', placeholder='Password', required='')
           #remember.checkbox

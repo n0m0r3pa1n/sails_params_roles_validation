@@ -37,18 +37,9 @@ var getCustomLogger = function getCustomLogger (logFileName) {
 /*eslint-disable indent */
 var logFileName = (function(env) {
   switch (env) {
-    case 'production':
-      return '/var/log/getti-web/web-shop-cms.log';
-
-    case 'testing':
-      return '/var/log/getti-web/web-shop-cms-testing.log';
-
-    case 'beta':
-      return '/var/log/getti-web/web-shop-cms-beta.log';
-
     case 'development':
     default:
-      return '/var/log/getti-web/web-shop-cms-dev.log';
+      return './web-shop-cms-dev.log';
   }
 })(process.env.NODE_ENV);
 /*eslint-enable indent */

@@ -16,7 +16,7 @@ module.exports = function modelValidation(req, res, next) {
     if (err != null) {
       error = err.details[0]
       error.statusCode = 400
-      return res.badRequest({ csrf: req.csrfToken(), error: error }, req.options.action);
+      return res.badRequest({ error: error }, req.options.action);
     } else {
       return next();
     }

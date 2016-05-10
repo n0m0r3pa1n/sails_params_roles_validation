@@ -50,7 +50,7 @@
 
 module.exports.csrf = {
 
-  protectionEnabled: true,
-  grantTokenViaAjax: true
+  protectionEnabled: false,
+  grantTokenViaAjax: false
 
 };
