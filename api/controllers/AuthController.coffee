@@ -2,7 +2,7 @@ SessionService = require("../services/SessionService")
 
 module.exports =
   getLogin: (req, res) ->
-    SessionService(req).create("gmirchev90", "1234", Roles.ADMIN)
+    SessionService(req).create("test", "1234", Roles.ADMIN)
     res.view("login")
 
   login: (req, res) ->

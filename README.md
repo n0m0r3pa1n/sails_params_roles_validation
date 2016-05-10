@@ -2,15 +2,15 @@
 
 ## Run project
 
-1. Uncomment the line 13 in AuthController for the creation of a user - replace username and password with your own
-2. Then run the following commands in sequence
+1. Then run the following commands in sequence
 ```
 sudo apt-get install redis-server
 npm install
 nodemon //or "sails lift"
 ```
-3. You must have MongoDB & Redis installed
-4. Open your localhost:3338 and try to enter letters in the password. Joi will throw an exception that it need to be only numbers. Strange, huh.
+2. You must have MongoDB & Redis installed
+3. Open your localhost:3338 and try to enter letters in the password. Joi will throw an exception that it need to be only numbers. Strange, huh.
+4. To enter successfully the site the username is "test", password is "1234"
 
 ## Params Validation Requirements
 
