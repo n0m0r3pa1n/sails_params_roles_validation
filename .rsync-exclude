@@ -1,0 +1,7 @@
+.git/*
+.editorconfig
+.eslintrc
+.gitignore
+coffeelint.json
+deploy.sh
+nodemon.json

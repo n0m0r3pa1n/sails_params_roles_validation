@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    title Web Shop CMS
+
+    meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1")
+
+    link(rel="stylesheet", href="/styles/importer.css")
+    link(rel="stylesheet", href="/styles/bootstrap-theme.min.css")
+    link(rel="stylesheet", href="/styles/bootstrap.min.css")
+    link(rel="stylesheet", href="/styles/importer.css")
+    link(rel="stylesheet", href="/styles/styles.css")
+
+  body
+    div.container
+      .card.card-container
+        img#profile-img.profile-img-card(src='//ssl.gstatic.com/accounts/ui/avatar_2x.png')
+        p#profile-name.profile-name-card
+        if error
+          h4.text-center.has-error
+            .control-label #{error.message}
+        form.form-signin(method='POST')
+          span#reauth-email.reauth-email
+          input(name='_csrf', value='#{csrf}', type='hidden')
+          input#inputEmail.form-control(name='username', type='text', placeholder='Username', required='', autofocus='')
+          input#inputPassword.form-control(name='password', type='password', placeholder='Password', required='')
+          #remember.checkbox
+            label
+              input(type='checkbox', value='remember-me')
+              |  Remember me
+          button.btn.btn-lg.btn-success.btn-block.btn-signin(type='submit') Login
+        // /form
+        a.forgot-password(href='#')
+          | Forgot the password?
+
+
+

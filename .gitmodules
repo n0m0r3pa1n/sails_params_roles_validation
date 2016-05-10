@@ -1,0 +1,3 @@
+[submodule "api/models/shared"]
+	path = api/models/shared
+	url = git@dev.getti.org:getti-web/web-shop-models.git

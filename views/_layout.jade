@@ -1,0 +1,51 @@
+doctype html
+html
+  head
+    if locals.title
+      title= title
+    else
+      title
+
+    // Viewport mobile tag for sensible mobile support
+    meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1")
+
+    // STYLES
+    link(rel="stylesheet", href="/styles/bootstrap-select.min.css")
+    link(rel="stylesheet", href="/styles/bootstrap-theme.min.css")
+    link(rel="stylesheet", href="/styles/bootstrap.min.css")
+    link(rel="stylesheet", href="/styles/importer.css")
+    link(rel="stylesheet", href="/styles/styles.css")
+    // STYLES END
+
+    block styles
+  body
+    #wrapper
+      #page-content-wrapper
+        .container-fluid
+          .row
+            .col-lg-12
+              block body
+          a(href="#menu-toggle", class="btn btn-default pull-left", id="menu-toggle") Toggle Menu
+
+  script(src="/js/dependencies/jquery-2.2.3.min.js")
+  script(src="/js/dependencies/bootstrap.min.js")
+  script(src="/js/dependencies/bootstrap-select.js")
+  script(src="https://www.gstatic.com/charts/loader.js")
+  block scripts
+  script.
+    $(function() {
+      $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+      });
+
+      $("ul.sidebar-nav li a").each(function (a, item) {
+        pathName = location.pathname
+        if(pathName.indexOf($(item).attr('href')) > -1)
+          $(item).attr("class", "active")
+      })
+
+      $("button#reset").on("click", function (e) {
+        window.location = window.location.pathname;
+      })
+    })

@@ -1,0 +1,12 @@
+{
+  "hooks": {
+    "blueprints": false,
+    "i18n": false,
+    "sockets": false,
+    "pubsub": false,
+    "cors": false,
+    "userhooks": false,
+    "orm": false
+  }
+}
+
